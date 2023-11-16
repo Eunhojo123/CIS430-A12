@@ -11,7 +11,7 @@
 
 <widget 
     id                      = "ColorShake"
-    android-packageName     = "edu.asu.cis430.spring23.ASURITE.ColorShake"
+    android-packageName     = "edu.asu.cis430.spring23.eunhojo.ColorShake"
     version                 = "23.2.0" 
     xmlns                   = "https://www.w3.org/ns/widgets">
 
@@ -25,8 +25,8 @@
         Demonstrates responding to Shake Events and using 3rd party plugins
     </description>
 
-    <author email="ASURITE@asu.edu" href="http://www.asu.edu">
-        FIRSTNAME LASTNAME
+    <author email="eunhojo@asu.edu" href="http://www.asu.edu">
+        Eunho Jo
     </author>
 
     <content src="index.html" />  <!-- the starting point of your hybrid app -->

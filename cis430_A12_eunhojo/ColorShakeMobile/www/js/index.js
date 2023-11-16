@@ -17,6 +17,10 @@ function onDeviceReady(){
 	rgbNode 			= document.getElementById('rgbId')
 	shakeNode			= document.getElementById('shakeId');
 
+	buttonNode.addEventListener('click', changeColor, false)
+
+	changeColor()
+
 	// https://github.com/leecrossley/cordova-plugin-shake
 	// place <plugin name="cordova-plugin-shake"/> in config.xml
 	// shake object will exist onDeviceReady()
@@ -27,6 +31,22 @@ function onDeviceReady(){
 		shake.startWatch(onShake, 30, onShakeError);
 	}
 
+}
+
+function changeColor() {
+	var r = randomColorComponent()
+	var g = randomColorComponent()
+	var b = randomColorComponent()
+
+	var rgbString = "rgb(" + r + "," + g + "," + b + ")"
+	console.log(rgbString)
+
+	rgbNode.innerHTML = rgbString
+	document.body.style.backgroundColor = rgbString
+}
+
+function randomColorComponent() {
+	return Math.floor(Math.random() * 256) //make a random int from 0 - 255
 }
 
 var onShake = function() {
